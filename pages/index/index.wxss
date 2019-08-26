@@ -1,0 +1,13 @@
+.container-fluid {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn {
+  background: inherit;
+}
+
+.active {
+  color: #1FC8CF;
+}

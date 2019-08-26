@@ -1,0 +1,8 @@
+<view class="container-fluid">
+ <button wx:for="{{layouts}}" class="btn {{layout==item ? 'active' :''}}" bindtap="showModal" data-layout='{{item}}' wx:key='index'>
+    {{item}}
+  </button>
+  <v-modal id="modal" title="拒绝原因" layout="{{layout}}" bind:confirm="confirmRefuse">
+    <textarea class="cell__ft_textarea" placeholder-class="textareaPlaceholder" placeholder="请输入拒绝原因" bindinput="getRefuseReason"></textarea>
+  </v-modal>
+</view>

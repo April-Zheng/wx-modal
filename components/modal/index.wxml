@@ -1,0 +1,17 @@
+<view  hidden="{{!isShow}}" class='modal' catchtouchmove="preventTouchMove">
+  <view data-type="mask" catchtap='_cancelModal' class='modal-mask'></view>
+  <view animation="{{animationData}}" class='modal-layer  modal-layer-{{layout}}'>
+    <!-- 头部 -->
+    <view class='modal-header' wx:if="{{header}}">
+      <text>{{title}}</text>
+    </view>
+    <!-- 内容区域 -->
+    <view class='modal-body'>
+      <slot></slot>
+    </view>
+    <view class='modal-footer' wx:if="{{footer}}">
+        <button class='btn btn-cancel' catchtap='_cancelModal' wx:if="{{isCancelShow}}">{{cancelText}}</button>
+        <button class='btn btn-confirm' catchtap='_confirmModal'>{{confirmText}}</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "v-modal": "../../components/modal/index"
+    },
+    "navigationBarTitleText": "Modal"
+}
